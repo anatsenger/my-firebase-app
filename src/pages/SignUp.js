@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { auth, db } from '../firebase';
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
+import { useNavigate } from 'react-router-dom';  // Importando useNavigate
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +12,8 @@ const SignUp = () => {
     lastName: '',
     birthDate: ''
   });
+  
+  const navigate = useNavigate(); // Hook de navegação do react-router-dom
 
   const handleChange = (e) => {
     setFormData({
@@ -39,6 +42,11 @@ const SignUp = () => {
     }
   };
 
+  // Função para redirecionar para a página de login
+  const goToLogin = () => {
+    navigate('/login');
+  };
+
   return (
     <div className="signup-container">
       <h2>Cadastro</h2>
@@ -50,6 +58,10 @@ const SignUp = () => {
         <input type="date" name="birthDate" onChange={handleChange} />
         <button type="submit">Cadastrar</button>
       </form>
+      
+      <button className="login-button" onClick={goToLogin}>
+        Já tem uma conta? Faça Login
+      </button>
     </div>
   );  
 };

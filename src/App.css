@@ -1,4 +1,72 @@
-/* Container geral da página de login */
+/* Container geral da página principal */
+.main-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.main-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+.user-data {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+}
+
+.user-data p {
+  font-size: 18px;
+  margin: 8px 0;
+  color: #333;
+}
+
+.loading-text {
+  text-align: center;
+  font-size: 16px;
+  color: #888;
+}
+
+.logout-button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+}
+
+@media (max-width: 600px) {
+  .main-container {
+    margin: 20px;
+    padding: 15px;
+  }
+  
+  .main-container h2 {
+    font-size: 20px;
+  }
+
+  .user-data p {
+    font-size: 16px;
+  }
+}
+
 .login-container {
   max-width: 400px;
   margin: 50px auto;
@@ -8,7 +76,6 @@
   border-radius: 8px;
 }
 
-/* Estilo do título */
 .login-container h2 {
   text-align: center;
   margin-bottom: 20px;
@@ -16,7 +83,6 @@
   font-size: 24px;
 }
 
-/* Estilo dos inputs */
 .login-container input {
   width: 100%;
   padding: 10px;
@@ -28,13 +94,11 @@
   transition: border-color 0.3s ease;
 }
 
-/* Foco nos inputs */
 .login-container input:focus {
   border-color: #007bff;
   outline: none;
 }
 
-/* Botão de envio */
 .login-container button {
   width: 100%;
   padding: 12px;
@@ -48,12 +112,10 @@
   transition: background-color 0.3s ease;
 }
 
-/* Efeito hover no botão */
 .login-container button:hover {
   background-color: #0056b3;
 }
 
-/* Estilo da mensagem de erro */
 .login-container p {
   color: red;
   text-align: center;
@@ -61,7 +123,6 @@
   font-size: 14px;
 }
 
-/* Estilo para dispositivos móveis */
 @media (max-width: 600px) {
   .login-container {
     margin: 20px;
@@ -80,6 +141,22 @@
   .login-container button {
     font-size: 16px;
     padding: 10px;
+  }
+  .signup-button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .signup-button:hover {
+    background-color: #218838;
   }
 }
 
@@ -150,6 +227,23 @@
   .signup-container button {
     font-size: 16px;
     padding: 10px;
+  }
+
+  .login-button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .login-button:hover {
+    background-color: #218838;
   }
 }
 

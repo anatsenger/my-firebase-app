@@ -19,6 +19,10 @@ const Login = () => {
     }
   };
 
+  const goToSignUp = () => {
+    navigate('/signup');
+  };
+
   return (
     <div className="login-container">
       <h2>Login</h2>
@@ -28,6 +32,10 @@ const Login = () => {
         <button type="submit">Entrar</button>
       </form>
       {error && <p>{error}</p>}
+      
+      <button className="signup-button" onClick={goToSignUp}>
+        Não tem uma conta? Cadastre-se
+      </button>
     </div>
   );  
 };
