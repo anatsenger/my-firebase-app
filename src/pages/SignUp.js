@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { auth, db } from '../firebaseConfig';
+import { auth, db } from '../firebase';
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 
@@ -40,7 +40,7 @@ const SignUp = () => {
   };
 
   return (
-    <div>
+    <div className="signup-container">
       <h2>Cadastro</h2>
       <form onSubmit={handleSubmit}>
         <input type="email" name="email" placeholder="E-mail" onChange={handleChange} />
@@ -51,7 +51,7 @@ const SignUp = () => {
         <button type="submit">Cadastrar</button>
       </form>
     </div>
-  );
+  );  
 };
 
 export default SignUp;

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from 'react-router-dom';
-import { auth } from '../firebaseConfig';
+import { auth } from '../firebase';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -20,7 +20,7 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className="login-container">
       <h2>Login</h2>
       <form onSubmit={handleLogin}>
         <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="E-mail" />
@@ -29,7 +29,7 @@ const Login = () => {
       </form>
       {error && <p>{error}</p>}
     </div>
-  );
+  );  
 };
 
 export default Login;
